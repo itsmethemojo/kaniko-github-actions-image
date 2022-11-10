@@ -11,3 +11,5 @@ FROM node:19-slim
 COPY --from=kaniko /kaniko/executor /kaniko/executor
 
 COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+
+ENV DOCKER_CONFIG=/kaniko/.docker/
