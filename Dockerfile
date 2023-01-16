@@ -6,7 +6,7 @@ RUN apk --update add ca-certificates
 
 FROM gcr.io/kaniko-project/executor:v${KANIKO_VERSION} as kaniko
 
-FROM node:19-slim
+FROM node:19
 
 COPY --from=kaniko /kaniko/executor /kaniko/executor
 
